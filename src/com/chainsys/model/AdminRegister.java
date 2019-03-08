@@ -14,8 +14,6 @@ public class AdminRegister {
 		return id;
 	}
 
-	
-
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -59,6 +57,7 @@ public class AdminRegister {
 	public void setPhoneno(Long phoneno) {
 		this.phoneno = phoneno;
 	}
+
 	@Override
 	public String toString() {
 		return "AdminRegister [id=" + id + ", name=" + name + ", password="

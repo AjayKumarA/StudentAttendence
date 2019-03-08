@@ -10,18 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.chainsys.dao.StudnetDAO;
+import com.chainsys.dao.StudentDAO;
 import com.chainsys.model.Students;
 
-/**
- * Servlet implementation class StudentServlet
- */
 @WebServlet("/StudentServlet")
 public class StudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String rollno = request.getParameter("number");
 		String clas = request.getParameter("clas");
@@ -30,7 +27,7 @@ public class StudentServlet extends HttpServlet {
 		Long phoneno = Long.parseLong(request.getParameter("phoneno"));
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
+
 		Students students = new Students();
 		students.setName(name);
 		students.setRollno(rollno);
@@ -40,17 +37,16 @@ public class StudentServlet extends HttpServlet {
 		students.setPhoneno(phoneno);
 		students.setEmail(email);
 		students.setPassword(password);
-		
-		StudnetDAO studentDAO = new StudnetDAO();
+
+		StudentDAO studentDAO = new StudentDAO();
 		try {
 			studentDAO.addStudents(students);
 			RequestDispatcher rd = request.getRequestDispatcher("login.html");
 			rd.forward(request, response);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

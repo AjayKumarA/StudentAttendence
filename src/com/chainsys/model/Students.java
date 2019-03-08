@@ -1,18 +1,25 @@
 package com.chainsys.model;
 
 public class Students {
+	   private  int id;
        private  String name;
-	private  String rollno;
+	   private  String rollno;
        private  String clas;
        private  String gender;
        private  String address;
        private  Long phoneno;
        private  String email;
        private  String password;
+       public void setId(int id) {
+   		this.id = id;
+   	}
+       public int getId() {
+   		return id;
+   	}
        public String getName() {
    		return name;
    	}
-   	public void setName(String name) {
+       public void setName(String name) {
    		this.name = name;
    	}
    	public String getRollno() {

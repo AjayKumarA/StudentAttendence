@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chainsys.dao.ForgotPasswordDAO;
-import com.chainsys.dao.RegisterDAO;
 import com.chainsys.model.AdminRegister;
 
 
@@ -27,7 +26,7 @@ import com.chainsys.model.AdminRegister;
 	      System.out.println(adminregister.getPhoneno());
 	      System.out.println(adminregister.getPassword());
 	      ForgotPasswordDAO forgotPasswordDAO=new ForgotPasswordDAO();
-	      //PasswordValidator passwordvalidator=new PasswordValidator();
+	     
 	      
 	      try{
 	      forgotPasswordDAO.updatePassword(adminregister);
@@ -38,10 +37,6 @@ import com.chainsys.model.AdminRegister;
 	      catch(Exception e)
 	      {
 	    	  e.printStackTrace();
-	      
-
-
-
 	      }
 
 	      }

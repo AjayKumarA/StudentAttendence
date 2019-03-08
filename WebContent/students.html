@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Students</title>
+</head>
+<style>
+body {
+	background-image: url("image/as.jfif");
+	background-repeat: no-repeat;
+	background-attachement: fixed;
+	background-size: 1400px 700px;
+	text-align: center;
+	padding-top: 200px;
+}
+
+form {
+	display: inline-block;
+}
+</style>
+<body bgcolor="orange">
+	<form method="post" action="StudentServlet">
+		<table>
+			<tbody>
+				<tr>
+					<td align="left"><b>Name</b></td>
+					<td><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Roll number</b></td>
+					<td><input type="number" name="number" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Class</b></td>
+					<td><input type="text" name="clas" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Gender</b></td>
+					<td><input type="radio" name="gender" value="male" checked>Male
+						<input type="radio" name="gender" value="female">Female</td>
+				</tr>
+				<tr>
+					<td align="left"><b>Address</b></td>
+					<td><input type="text" name="address" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Phone number</b></td>
+					<td><input type="number" name="phoneno" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Email</b></td>
+					<td><input type="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td align="left"><b>Password</b></td>
+					<td><input type="password" name="password" required></td>
+				</tr>
+
+
+
+				<tr>
+					<td>
+						<Button type="Submit" name="submit">Register</Button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

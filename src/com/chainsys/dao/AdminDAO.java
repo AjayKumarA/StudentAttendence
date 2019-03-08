@@ -8,19 +8,17 @@ import java.sql.SQLException;
 import com.chainsys.model.Admins;
 
 public class AdminDAO {
-	public void addAdmin(Admins admins) throws SQLException
-	{
+	public void addAdmin(Admins admins) throws SQLException {
 		Connection connection = ConnectionUtil.getConnection();
-		String sql = "insert into admins(admin_id,admin_name,admin_phoneno,student_name,attendence_status,dates) values(?,?,?,?,?,?)";
+		String sql = "insert into admins(id,name,phone_number,student_name,attendence_status,dates) values(admins_id_seq.NEXTVAL,?,?,?,?,?)";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
-		preparedStatement.setInt(1, admins.getAdminId());
-		preparedStatement.setString(2, admins.getAdminName());
-		preparedStatement.setLong(3, admins.getAdminPhoneno());
-		preparedStatement.setString(4, admins.getStudentName());
-		preparedStatement.setString(5, admins.getAttendenceStatus());
-		preparedStatement.setDate(6, Date.valueOf(admins.getDates()));
+		preparedStatement.setString(1, admins.getName());
+		preparedStatement.setLong(2, admins.getPhonenumber());
+		preparedStatement.setString(3, admins.getStudentName());
+		preparedStatement.setString(4, admins.getAttendenceStatus());
+		preparedStatement.setDate(5, Date.valueOf(admins.getDates()));
 		preparedStatement.executeQuery();
-		
+
 	}
 
 }

@@ -13,11 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.chainsys.dao.RegisterDAO;
 import com.chainsys.model.AdminRegister;
-import com.chainsys.model.Students;
 
-/**
- * Servlet implementation class AdminRegisterServlet
- */
+
 @WebServlet("/AdminRegisterServlet")
 public class AdminRegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -32,7 +29,7 @@ public class AdminRegisterServlet extends HttpServlet {
 		
 		AdminRegister adminRegister = new AdminRegister();
 		adminRegister.setId(id);
-		adminRegister.setName(name);;
+		adminRegister.setName(name);
 		adminRegister.setPassword(password);
 		adminRegister.setDob(dob);
 		adminRegister.setEmail(email);
@@ -44,7 +41,6 @@ public class AdminRegisterServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
 			rd.forward(request, response);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

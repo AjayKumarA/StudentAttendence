@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>admin page</title>
+<title>adminpage</title>
 </head>
 <style>
 body {
-   background-image : url("image/as.jfif");
-   background-repeat : no-repeat;
-   background-attachement : fixed;
-   text-align: center;
-   padding-top: 200px;
+	background-image: url("image/as.jfif");
+	background-repeat: no-repeat;
+	background-attachement: fixed;
+	text-align: center;
+	padding-top: 200px;
 }
 
 form {
@@ -25,14 +25,15 @@ form {
 			<tbody>
 				<tr>
 					<td align="left"><b>AdminId</b></td>
-					<td><input type="number" name="adminId"></td>
+					<td><input type="number" name="
+"></td>
 				</tr>
 				<tr>
 					<td align="left"><b>AdminName</b></td>
 					<td><input type="text" name="adminName"></td>
 				</tr>
 				<tr>
-					<td align="left"><b>AdminPhoneno</b></td>
+					<td align="left"><b>AdminPhonenumber</b></td>
 					<td><input type="number" name="adminPhoneno"></td>
 				</tr>
 				<tr>
@@ -53,6 +54,6 @@ form {
 					</td>
 			</tbody>
 		</table>
-		</form>
+	</form>
 </body>
 </html>

@@ -10,13 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chainsys.dao.ForgotDAO;
-import com.chainsys.dao.ForgotPasswordDAO;
-import com.chainsys.model.AdminRegister;
 import com.chainsys.model.Students;
 
-/**
- * Servlet implementation class ForgetServlet
- */
+
 @WebServlet("/ForgetServlet")
 public class ForgetServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,7 +27,6 @@ public class ForgetServlet extends HttpServlet {
 		      System.out.println(students.getPhoneno());
 		      System.out.println(students.getPassword());
 		      ForgotDAO forgotDAO=new ForgotDAO();
-		      //PasswordValidator passwordvalidator=new PasswordValidator();
 		      
 		      try{
 		      forgotDAO.changePassword(students);
@@ -42,10 +37,6 @@ public class ForgetServlet extends HttpServlet {
 		      catch(Exception e)
 		      {
 		    	  e.printStackTrace();
-		      
-
-
-
 		      }
 
 		      }

@@ -14,17 +14,17 @@ public class AdminValidator {
 			Connection connection = ConnectionUtil.getConnection();
 			String sql = "select id,password from adminregister where id = ? and password = ?";
 
-			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			//Integer id = adminRegister.getId();
+			PreparedStatement preparedStatement = connection
+					.prepareStatement(sql);
+			// Integer id = adminRegister.getId();
 			preparedStatement.setInt(1, adminRegister.getId());
-			String password = adminRegister.getPassword();
+			//String password = adminRegister.getPassword();
 			preparedStatement.setString(2, adminRegister.getPassword());
 			ResultSet resultSet = preparedStatement.executeQuery();
-			while(resultSet.next())
-			{
+			while (resultSet.next()) {
 				isFound = true;
 			}
-		} catch (SQLException e){
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return isFound;
